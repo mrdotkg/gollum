@@ -1,0 +1,17 @@
+{
+  "name": "gollum",
+  "version": "1.0.0",
+  "description": "Electron app for crud and more..",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Kumar Gaurav",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.8.4"
+  },
+  "dependencies": {
+    "nedb": "^1.8.0"
+  }
+}
