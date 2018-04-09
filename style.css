@@ -38,6 +38,11 @@ x-menubar{
     background: none !important;
 }
 
+.table-striped tbody tr:nth-of-type(odd):active
+{
+    background: #116cd6 !important;
+}
+
 x-card {
     margin: 15px 0 15px 0 !important;
 }
