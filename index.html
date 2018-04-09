@@ -15,6 +15,8 @@
 	
 	<!--Photon Project css-->
 	<link rel="stylesheet" href="css/photon.css">
+	<!--time line css-->
+	<link rel="stylesheet" href="css/photon.css">
 	
 	<!--fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Roboto+Mono" rel="stylesheet">
@@ -57,244 +59,245 @@
 	<header class=" toolbar toolbar-header">
 		<x-throbber class="bg-running-task" type="spin" style="height: 13px;width: 13px;position: relative;right: 5px;float: right;"></x-throbber>
 		<h1 class="title">G O L L U M</h1>
+		<x-menubar>
+			<!--&lt;!&ndash;HOME&ndash;&gt;-->
+			<!--<x-menuitem>-->
+			<!--<x-label>Home</x-label>-->
+			<!--</x-menuitem>-->
+			
+			<!--PRODUCTS-->
+			<x-menuitem>
+				<x-label>Products</x-label>
+				
+				<x-menu>
+					<x-menuitem>
+						<x-icon name="desktop-mac"></x-icon>
+						<x-label>Products</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="account-balance-wallet"></x-icon>
+						<x-label>Products Costs</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="branding-watermark"></x-icon>
+						<x-label>Brands</x-label>
+					</x-menuitem>
+					
+					<hr>
+					
+					<x-menuitem>
+						<x-icon name="file-upload"></x-icon>
+						<x-label>Bulk Image Uploader</x-label>
+						<x-shortcut value="Control+Shift+I"></x-shortcut>
+					</x-menuitem>
+				</x-menu>
+			</x-menuitem>
+			
+			<!--CATEGORIES-->
+			<x-menuitem>
+				<x-label>Categories</x-label>
+				
+				<x-menu>
+					<x-menuitem>
+						<x-icon name="desktop-mac"></x-icon>
+						<x-label>Products Categories</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="account-balance-wallet"></x-icon>
+						<x-label>Master Categories</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="branding-watermark"></x-icon>
+						<x-label>Category Alias</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="branding-watermark"></x-icon>
+						<x-label>Email Categories</x-label>
+					</x-menuitem>
+				</x-menu>
+			</x-menuitem>
+			
+			<!--MARKETING-->
+			<x-menuitem>
+				<x-label>Marketing</x-label>
+				
+				<x-menu>
+					<x-menuitem>
+						<x-icon name="desktop-mac"></x-icon>
+						<x-label>Traffic Sources</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="account-balance-wallet"></x-icon>
+						<x-label>Automated Discounts Pricing</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="branding-watermark"></x-icon>
+						<x-label>Automated Discounts Schedule</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="account-balance-wallet"></x-icon>
+						<x-label>Sources Report</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="branding-watermark"></x-icon>
+						<x-label>Rewards</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="branding-watermark"></x-icon>
+						<x-label>Shopping Services</x-label>
+					</x-menuitem>
+				
+				</x-menu>
+			</x-menuitem>
+			
+			<!--REPORTS-->
+			<x-menuitem>
+				<x-label>Reports</x-label>
+				
+				<x-menu>
+					<x-menuitem>
+						<x-icon name="desktop-mac"></x-icon>
+						<x-label>Products</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="account-balance-wallet"></x-icon>
+						<x-label>Products Costs</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-icon name="branding-watermark"></x-icon>
+						<x-label>Brands</x-label>
+					</x-menuitem>
+					
+					<hr>
+					
+					<x-menuitem>
+						<x-icon name="file-upload"></x-icon>
+						<x-label>Bulk Image Uploader</x-label>
+						<x-shortcut value="Control+Shift+I"></x-shortcut>
+					</x-menuitem>
+				</x-menu>
+			</x-menuitem>
+			
+			<!--IMPORT/EXPORT-->
+			<x-menuitem>
+				<x-label>Import/Export</x-label>
+				
+				<x-menu>
+					<x-menuitem>
+						<x-label>Content</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-label>Marketing</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-label>Inventory</x-label>
+						<x-menu>
+							<x-menuitem>
+								<x-label>Product Price List</x-label>
+							</x-menuitem>
+							<x-menuitem>
+								<x-label>Product Minimum Quantities</x-label>
+							</x-menuitem>
+							<x-menuitem>
+								<x-label>Product Close-Out and Monthly Usage</x-label>
+							</x-menuitem>
+						</x-menu>
+					</x-menuitem>
+					<x-menuitem>
+						<x-label>Operations</x-label>
+					</x-menuitem>
+				</x-menu>
+			</x-menuitem>
+			
+			<!--USERS-->
+			<x-menuitem>
+				<x-label>Users</x-label>
+				
+				<x-menu>
+					<x-menuitem>
+						<x-label>User Management</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-label>Roles and Permissions</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-label>Application Components</x-label>
+					</x-menuitem>
+				</x-menu>
+			</x-menuitem>
+			
+			<!--SETTINGS-->
+			<x-menuitem>
+				<x-label>Settings</x-label>
+				
+				<x-menu>
+					<x-menuitem>
+						<x-label>Global Settings</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-label>Left Navs</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-label>Shipping</x-label>
+					</x-menuitem>
+				</x-menu>
+			</x-menuitem>
+			
+			<!--FULFILLMENT-->
+			<x-menuitem>
+				<x-label>Fulfillment</x-label>
+				
+				<x-menu>
+					<x-menuitem>
+						<x-label>Boxes</x-label>
+					</x-menuitem>
+					<x-menuitem>
+						<x-label>Fulfilment Summary</x-label>
+					</x-menuitem>
+				</x-menu>
+			</x-menuitem>
+			
+			<!--TOOLS-->
+			<x-menuitem>
+				<x-label>Tool</x-label>
+				
+				<x-menu>
+					<!--STATIC PAGES-->
+					<x-menuitem>
+						<x-label>Static Pages</x-label>
+					</x-menuitem>
+					
+					<x-menuitem>
+						<x-label>Paymentech Tests</x-label>
+					</x-menuitem>
+				
+				</x-menu>
+			</x-menuitem>
+			
+			<!--HELP-->
+			<x-menuitem>
+				<x-label>Help</x-label>
+				
+				<x-menu>
+					<x-menuitem>
+						<x-icon name="help"></x-icon>
+						<x-label>Documentation</x-label>
+					</x-menuitem>
+				</x-menu>
+			</x-menuitem>
+		
+		</x-menubar>
+		<tab-group>
+			<tab-item type="fixed" class="active">
+				Dashboard
+			</tab-item>
+			
+			<tab-item type="fixed" action="add"></tab-item>
+		</tab-group>
 	</header>
     
 	
-	<x-menubar>
-		<!--&lt;!&ndash;HOME&ndash;&gt;-->
-		<!--<x-menuitem>-->
-			<!--<x-label>Home</x-label>-->
-		<!--</x-menuitem>-->
-		
-		<!--PRODUCTS-->
-		<x-menuitem>
-			<x-label>Products</x-label>
-			
-			<x-menu>
-				<x-menuitem>
-					<x-icon name="desktop-mac"></x-icon>
-					<x-label>Products</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="account-balance-wallet"></x-icon>
-					<x-label>Products Costs</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="branding-watermark"></x-icon>
-					<x-label>Brands</x-label>
-				</x-menuitem>
-				
-				<hr>
-				
-				<x-menuitem>
-					<x-icon name="file-upload"></x-icon>
-					<x-label>Bulk Image Uploader</x-label>
-					<x-shortcut value="Control+Shift+I"></x-shortcut>
-				</x-menuitem>
-			</x-menu>
-		</x-menuitem>
-		
-		<!--CATEGORIES-->
-		<x-menuitem>
-			<x-label>Categories</x-label>
-			
-			<x-menu>
-				<x-menuitem>
-					<x-icon name="desktop-mac"></x-icon>
-					<x-label>Products Categories</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="account-balance-wallet"></x-icon>
-					<x-label>Master Categories</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="branding-watermark"></x-icon>
-					<x-label>Category Alias</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="branding-watermark"></x-icon>
-					<x-label>Email Categories</x-label>
-				</x-menuitem>
-			</x-menu>
-		</x-menuitem>
-		
-		<!--MARKETING-->
-		<x-menuitem>
-			<x-label>Marketing</x-label>
-			
-			<x-menu>
-				<x-menuitem>
-					<x-icon name="desktop-mac"></x-icon>
-					<x-label>Traffic Sources</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="account-balance-wallet"></x-icon>
-					<x-label>Automated Discounts Pricing</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="branding-watermark"></x-icon>
-					<x-label>Automated Discounts Schedule</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="account-balance-wallet"></x-icon>
-					<x-label>Sources Report</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="branding-watermark"></x-icon>
-					<x-label>Rewards</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="branding-watermark"></x-icon>
-					<x-label>Shopping Services</x-label>
-				</x-menuitem>
-			
-			</x-menu>
-		</x-menuitem>
-		
-		<!--REPORTS-->
-		<x-menuitem>
-			<x-label>Reports</x-label>
-			
-			<x-menu>
-				<x-menuitem>
-					<x-icon name="desktop-mac"></x-icon>
-					<x-label>Products</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="account-balance-wallet"></x-icon>
-					<x-label>Products Costs</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-icon name="branding-watermark"></x-icon>
-					<x-label>Brands</x-label>
-				</x-menuitem>
-				
-				<hr>
-				
-				<x-menuitem>
-					<x-icon name="file-upload"></x-icon>
-					<x-label>Bulk Image Uploader</x-label>
-					<x-shortcut value="Control+Shift+I"></x-shortcut>
-				</x-menuitem>
-			</x-menu>
-		</x-menuitem>
-		
-		<!--IMPORT/EXPORT-->
-		<x-menuitem>
-			<x-label>Import/Export</x-label>
-			
-			<x-menu>
-				<x-menuitem>
-					<x-label>Content</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-label>Marketing</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-label>Inventory</x-label>
-					<x-menu>
-						<x-menuitem>
-							<x-label>Product Price List</x-label>
-						</x-menuitem>
-						<x-menuitem>
-							<x-label>Product Minimum Quantities</x-label>
-						</x-menuitem>
-						<x-menuitem>
-							<x-label>Product Close-Out and Monthly Usage</x-label>
-						</x-menuitem>
-					</x-menu>
-				</x-menuitem>
-				<x-menuitem>
-					<x-label>Operations</x-label>
-				</x-menuitem>
-			</x-menu>
-		</x-menuitem>
-		
-		<!--USERS-->
-		<x-menuitem>
-			<x-label>Users</x-label>
-			
-			<x-menu>
-				<x-menuitem>
-					<x-label>User Management</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-label>Roles and Permissions</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-label>Application Components</x-label>
-				</x-menuitem>
-			</x-menu>
-		</x-menuitem>
-		
-		<!--SETTINGS-->
-		<x-menuitem>
-			<x-label>Settings</x-label>
-			
-			<x-menu>
-				<x-menuitem>
-					<x-label>Global Settings</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-label>Left Navs</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-label>Shipping</x-label>
-				</x-menuitem>
-			</x-menu>
-		</x-menuitem>
-		
-		<!--FULFILLMENT-->
-		<x-menuitem>
-			<x-label>Fulfillment</x-label>
-			
-			<x-menu>
-				<x-menuitem>
-					<x-label>Boxes</x-label>
-				</x-menuitem>
-				<x-menuitem>
-					<x-label>Fulfilment Summary</x-label>
-				</x-menuitem>
-			</x-menu>
-		</x-menuitem>
-		
-		<!--TOOLS-->
-		<x-menuitem>
-			<x-label>Tool</x-label>
-			
-			<x-menu>
-				<!--STATIC PAGES-->
-				<x-menuitem>
-					<x-label>Static Pages</x-label>
-				</x-menuitem>
-				
-				<x-menuitem>
-					<x-label>Paymentech Tests</x-label>
-				</x-menuitem>
-			
-			</x-menu>
-		</x-menuitem>
-		
-		<!--HELP-->
-		<x-menuitem>
-			<x-label>Help</x-label>
-			
-			<x-menu>
-				<x-menuitem>
-					<x-icon name="help"></x-icon>
-					<x-label>Documentation</x-label>
-				</x-menuitem>
-			</x-menu>
-		</x-menuitem>
 	
-	</x-menubar>
-	<tab-group>
-		<tab-item type="fixed" class="active">
-			Dashboard
-		</tab-item>
-		
-		<tab-item type="fixed" action="add"></tab-item>
-	</tab-group>
 	
 	<window-content>
 		<div id="swipe">
@@ -514,7 +517,7 @@
 												<strong>History</strong>
 											</header>
 											<table class="table-striped">
-											<thead>
+												<thead>
 												<tr>
 													<th>Name</th>
 													<th>Kind</th>
@@ -545,7 +548,6 @@
 												</tr>
 												</tbody>
 											</table>
-
 										</main>
 									</x-card>
 								</div>
