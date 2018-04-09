@@ -29,10 +29,9 @@
   }</script>
 	
 	<!--jquery-->
-	<script
-					src="https://code.jquery.com/jquery-3.3.1.min.js"
-					integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-					crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
 	<!--js-->
 	<script src="node_modules/xel/xel.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -45,7 +44,7 @@
 	<script>if (window.module) module = window.module;</script>
 	
 	<script>
-      const Photon = require('electron-photon');
+      require('electron-photon');
 	</script>
 
 </head>
@@ -53,7 +52,7 @@
 
 <ph-window data-vibrancy="menu">
 	<!--app menu-->
-	<header class=" toolbar toolbar-header" style="-webkit-app-region: drag;">
+	<header class=" toolbar toolbar-header">
 		<x-throbber style="height: 13px;width: 13px;position: relative;right: 5px;float: right;"></x-throbber>
 		<h1 class="title">G O L L U M</h1>
 	</header>
