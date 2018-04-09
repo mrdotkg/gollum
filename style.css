@@ -9,13 +9,16 @@
 
 /*more darker app header title*/
 .toolbar-header .title {
-    margin: 1px 0px;
+    margin: 1px 0;
     font-weight: 900 !important;
 }
 
 x-menubar{
     border: 0;
     padding: 0 6px 0 0;
+}
+ph-window header{
+    -webkit-app-region: drag;
 }
 .pane.theme-gray
 {
@@ -25,8 +28,8 @@ x-menubar{
 /*remove bootstrap default margin*/
 .row
 {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /*fix conflict with table.scss*/
