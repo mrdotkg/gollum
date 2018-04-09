@@ -12,6 +12,9 @@
     "electron": "^1.8.4"
   },
   "dependencies": {
-    "nedb": "^1.8.0"
+    "electron-photon": "^0.1.0",
+    "handsontable": "^0.38.1",
+    "nedb": "^1.8.0",
+    "xel": "0.0.130"
   }
 }

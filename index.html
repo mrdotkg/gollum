@@ -4,13 +4,537 @@
 	<meta charset="utf-8">
 	<title>Gollum</title>
 	
+	<!--Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<!--Xel Project css-->
+	<!--<link rel="stylesheet" href="node_modules/xel/stylesheets/vanilla.theme.css">-->
+	<!--<link rel="stylesheet" href="node_modules/xel/stylesheets/material.theme.css">-->
+	<link rel="stylesheet" href="node_modules/xel/stylesheets/macos.theme.css">
+	
+	<!--Photon Project css-->
+	<link rel="stylesheet" href="css/photon.css">
+	
+	<!--fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Roboto+Mono" rel="stylesheet">
+	
+	<!--custom styles-->
 	<link rel="stylesheet" href="style.css">
+	
+	<!-- Insert this line above script imports  -->
+	<script>if (typeof module === 'object') {
+      window.module = module;
+      module = undefined;
+  }</script>
+	
+	<!--jquery-->
+	<script
+					src="https://code.jquery.com/jquery-3.3.1.min.js"
+					integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+					crossorigin="anonymous"></script>
+	<!--js-->
+	<script src="node_modules/xel/xel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	
+	
+	<!--custom js-->
+	<script type="text/javascript" src="site.js"></script>
+	
+	<!-- Insert this line after script imports -->
+	<script>if (window.module) module = window.module;</script>
+	
+	<script>
+      const Photon = require('electron-photon');
+	</script>
 
 </head>
 <body>
 
-
-<script type="text/javascript" src="site.js"></script>
-
+<ph-window data-vibrancy="menu">
+	<!--app menu-->
+	<header class=" toolbar toolbar-header">
+		<x-throbber type="spin"
+		            style="display: none;height: 20px;width: 20px;position: relative;top: 1px;right: 5px;float: right;"></x-throbber>
+		<h1 class="title">G O L L U M</h1>
+	</header>
+	
+	<x-menubar>
+		<!--HOME-->
+		<x-menuitem>
+			<x-label>Home</x-label>
+		</x-menuitem>
+		
+		<!--PRODUCTS-->
+		<x-menuitem>
+			<x-label>Products</x-label>
+			
+			<x-menu>
+				<x-menuitem>
+					<x-icon name="desktop-mac"></x-icon>
+					<x-label>Products</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="account-balance-wallet"></x-icon>
+					<x-label>Products Costs</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="branding-watermark"></x-icon>
+					<x-label>Brands</x-label>
+				</x-menuitem>
+				
+				<hr>
+				
+				<x-menuitem>
+					<x-icon name="file-upload"></x-icon>
+					<x-label>Bulk Image Uploader</x-label>
+					<x-shortcut value="Control+Shift+I"></x-shortcut>
+				</x-menuitem>
+			</x-menu>
+		</x-menuitem>
+		
+		<!--CATEGORIES-->
+		<x-menuitem>
+			<x-label>Categories</x-label>
+			
+			<x-menu>
+				<x-menuitem>
+					<x-icon name="desktop-mac"></x-icon>
+					<x-label>Products Categories</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="account-balance-wallet"></x-icon>
+					<x-label>Master Categories</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="branding-watermark"></x-icon>
+					<x-label>Category Alias</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="branding-watermark"></x-icon>
+					<x-label>Email Categories</x-label>
+				</x-menuitem>
+			</x-menu>
+		</x-menuitem>
+		
+		<!--MARKETING-->
+		<x-menuitem>
+			<x-label>Marketing</x-label>
+			
+			<x-menu>
+				<x-menuitem>
+					<x-icon name="desktop-mac"></x-icon>
+					<x-label>Traffic Sources</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="account-balance-wallet"></x-icon>
+					<x-label>Automated Discounts Pricing</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="branding-watermark"></x-icon>
+					<x-label>Automated Discounts Schedule</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="account-balance-wallet"></x-icon>
+					<x-label>Sources Report</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="branding-watermark"></x-icon>
+					<x-label>Rewards</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="branding-watermark"></x-icon>
+					<x-label>Shopping Services</x-label>
+				</x-menuitem>
+			
+			</x-menu>
+		</x-menuitem>
+		
+		<!--REPORTS-->
+		<x-menuitem>
+			<x-label>Reports</x-label>
+			
+			<x-menu>
+				<x-menuitem>
+					<x-icon name="desktop-mac"></x-icon>
+					<x-label>Products</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="account-balance-wallet"></x-icon>
+					<x-label>Products Costs</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-icon name="branding-watermark"></x-icon>
+					<x-label>Brands</x-label>
+				</x-menuitem>
+				
+				<hr>
+				
+				<x-menuitem>
+					<x-icon name="file-upload"></x-icon>
+					<x-label>Bulk Image Uploader</x-label>
+					<x-shortcut value="Control+Shift+I"></x-shortcut>
+				</x-menuitem>
+			</x-menu>
+		</x-menuitem>
+		
+		<!--IMPORT/EXPORT-->
+		<x-menuitem>
+			<x-label>Import/Export</x-label>
+			
+			<x-menu>
+				<x-menuitem>
+					<x-label>Content</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-label>Marketing</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-label>Inventory</x-label>
+					<x-menu>
+						<x-menuitem>
+							<x-label>Product Price List</x-label>
+						</x-menuitem>
+						<x-menuitem>
+							<x-label>Product Minimum Quantities</x-label>
+						</x-menuitem>
+						<x-menuitem>
+							<x-label>Product Close-Out and Monthly Usage</x-label>
+						</x-menuitem>
+					</x-menu>
+				</x-menuitem>
+				<x-menuitem>
+					<x-label>Operations</x-label>
+				</x-menuitem>
+			</x-menu>
+		</x-menuitem>
+		
+		<!--USERS-->
+		<x-menuitem>
+			<x-label>Users</x-label>
+			
+			<x-menu>
+				<x-menuitem>
+					<x-label>User Management</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-label>Roles and Permissions</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-label>Application Components</x-label>
+				</x-menuitem>
+			</x-menu>
+		</x-menuitem>
+		
+		<!--SETTINGS-->
+		<x-menuitem>
+			<x-label>Settings</x-label>
+			
+			<x-menu>
+				<x-menuitem>
+					<x-label>Global Settings</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-label>Left Navs</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-label>Shipping</x-label>
+				</x-menuitem>
+			</x-menu>
+		</x-menuitem>
+		
+		<!--FULFILLMENT-->
+		<x-menuitem>
+			<x-label>Fulfillment</x-label>
+			
+			<x-menu>
+				<x-menuitem>
+					<x-label>Boxes</x-label>
+				</x-menuitem>
+				<x-menuitem>
+					<x-label>Fulfilment Summary</x-label>
+				</x-menuitem>
+			</x-menu>
+		</x-menuitem>
+		
+		<!--TOOLS-->
+		<x-menuitem>
+			<x-label>Tool</x-label>
+			
+			<x-menu>
+				<!--STATIC PAGES-->
+				<x-menuitem>
+					<x-label>Static Pages</x-label>
+				</x-menuitem>
+				
+				<x-menuitem>
+					<x-label>Paymentech Tests</x-label>
+				</x-menuitem>
+			
+			</x-menu>
+		</x-menuitem>
+		
+		<!--HELP-->
+		<x-menuitem>
+			<x-label>Help</x-label>
+			
+			<x-menu>
+				<x-menuitem>
+					<x-icon name="help"></x-icon>
+					<x-label>Documentation</x-label>
+				</x-menuitem>
+			</x-menu>
+		</x-menuitem>
+	
+	</x-menubar>
+	<tab-group>
+		<tab-item type="fixed" class="active">
+			Dashboard
+		</tab-item>
+		
+		<tab-item type="fixed" action="add"></tab-item>
+	</tab-group>
+	
+	<window-content>
+		<div id="swipe">
+			<div class="pane-group">
+				
+				<!--dashboard view-->
+				<div class="pane theme-gray dashboard">
+					<div class="row">
+						<div class="col-md-6">
+							<x-card>
+								<main>
+									<strong>Unpublished Changes</strong>
+									<p>This is sample card content</p>
+									<table class="table-striped">
+										<thead>
+										<tr>
+											<th>Name</th>
+											<th>Kind</th>
+											<th>File Size</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										...
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										</tbody>
+									</table>
+								
+								</main>
+							</x-card>
+						</div>
+						<div class="col-md-3">
+							<x-card>
+								<main>
+									<strong>Frequently used</strong>
+									<p>This is sample card content</p>
+									<table class="table-striped">
+										<thead>
+										<tr>
+											<th>Name</th>
+											<th>Kind</th>
+											<th>File Size</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										...
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										</tbody>
+									</table>
+								
+								</main>
+							</x-card>
+						</div>
+						<div class="col-md-3">
+							<x-card>
+								<main>
+									<strong>Quick Filters</strong>
+									<p>This is sample card content</p>
+									<table class="table-striped">
+										<thead>
+										<tr>
+											<th>Name</th>
+											<th>Kind</th>
+											<th>File Size</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										...
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										</tbody>
+									</table>
+								
+								</main>
+							</x-card>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<x-card>
+								<main>
+									<strong>History</strong>
+									<p>This is sample card content</p>
+									<table class="table-striped">
+										<thead>
+										<tr>
+											<th>Name</th>
+											<th>Kind</th>
+											<th>File Size</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										...
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										</tbody>
+									</table>
+								
+								</main>
+							</x-card>
+						</div>
+						<div class="col-md-4">
+							<x-card>
+								<main>
+									<strong>Tables</strong>
+									<p>This is sample card content</p>
+									<table class="table-striped">
+										<thead>
+										<tr>
+											<th>Name</th>
+											<th>Kind</th>
+											<th>File Size</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										...
+										<tr>
+											<td>photon.css</td>
+											<td>CSS</td>
+											<td>28K</td>
+										</tr>
+										</tbody>
+									</table>
+								
+								</main>
+							</x-card>
+						</div>
+					</div>
+				</div>
+				
+				<!--sidebar for crud view-->
+				<div class="pane-sm sidebar" style="max-width: 250px; display: none;"></div>
+				
+				<!--crud view-->
+				<div class="pane theme-gray" style="display: none;">
+					<div class="pane-group">
+						<div class="row" style="width: 100%">
+							<div class="col-md-12">
+								<div class="pane theme-gray">
+								
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="pane theme-gray">
+								
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</window-content>
+</ph-window>
 </body>
 </html>
