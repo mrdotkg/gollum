@@ -17,7 +17,7 @@ x-menubar{
     border: 0;
     padding: 0 6px 0 0;
 }
-.toolbar-header{
+.toolbar-header > h1{
     -webkit-app-region: drag;
 }
 .pane.theme-gray
